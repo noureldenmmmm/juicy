@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+}
+.jj {
+  height: auto;
+  width: 150px;
+  border-radius: 10%;
+  box-shadow: black;
+}
+.mango {
+  width: 200px;
+
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: 3%;
+}
