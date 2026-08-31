@@ -40,7 +40,7 @@ body{
   margin: 7px;
 }
 
-.isearch,.cart {
+.btA {
   height: 40px;
   width: 70px;
   border: none;
@@ -53,19 +53,19 @@ body{
 
 }
 
-.isearch,.cart:hover{
+.btA:hover{
   transition-timing-function: ease-in-out;
   background-color: rgb(253, 193, 83);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
 }
 
-.isearch,.cart:active{
+.btA:active{
   transition: 0.4s ;
   background-color: rgb(255, 166, 0);
   box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.add,.setting {
+.btB {
   height: 40px;
   width: 40px;
   border: none;
@@ -78,13 +78,13 @@ body{
 
 }
 
-.add,.setting:hover{
+.btB:hover{
   transition-timing-function: ease-in-out;
   background-color: rgb(253, 193, 83);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
 }
 
-.add,.setting:active{
+.btB:active{
   transition: 0.4s ;
   background-color: rgb(255, 166, 0);
   box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.5);
