@@ -5,21 +5,6 @@ const Product = require("./schema")
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true}));
-//Auto setup
-const path = require('path');
-const livereload = require('livereload');
-const connectLivereload = require('connect-livereload');
-const liveReloadServer = livereload.createServer();
-liveReloadServer.watch(path.join(__dirname, 'public'));
-app.use(connectLivereload());
-liveReloadServer.server.once('connection', () => {
-  setTimeout(() => {
-    liveReloadServer.refresh('/');
-  }, 100);
-});
-
-
-
 
 app.get('/', (req, res) => {
   Product.find()
@@ -50,7 +35,7 @@ app.post('/user/add.ejs',(req,res) => {
 })
 
 mongoose
-  .connect("mongodb+srv://nnourelden_db_user:YRds5GOmkYQ4OkO5@cluster0.ipewqxy.mongodb.net/data?appName=Cluster0")
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     app.listen(3000, () => {
       console.log('http://localhost:3000')
