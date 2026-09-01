@@ -18,7 +18,8 @@
     <form action="/user/add.ejs" method="POST">
       <input type="text" placeholder="name" name="name">
       <input type="number" placeholder="price" name="price">
-      <input type="file" accept="image/png , image/jpeg" name="image">
+      <label for="image-upload">Choose an image:</label>
+      <input type="file" id="image-upload" accept="image/png , image/jpeg" name="image">
       <input type="text" placeholder="description" name="description">
       <br>
       <br>
