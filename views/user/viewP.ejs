@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>juicy</title>
+  <link rel="stylesheet" href="\style\header.css">
+  <link rel="stylesheet" href="\style\main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link class="icon" rel="icon" type="image" href="/image/juicy-logo.png">
+</head>
+
+<body>
+  <%- include('../components/header.ejs') %>
+
+    <main>
+      <div class="product-view">
+        <img src="<%= product.image %>" class="jj">
+        <h2>
+          <%= product.name %>
+        </h2>
+        <h4>
+          <%= product.price %> EG
+        </h4>
+        <p>
+          description: <%= product.description %>
+        </p>
+        <div>
+    </main>
+</body>
+
+</html>

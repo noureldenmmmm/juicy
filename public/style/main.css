@@ -7,19 +7,31 @@ h1 {
   border-radius: 10%;
   box-shadow: black;
 }
-.mango {
-  width: 150px;
 
-}
 .menu {
   display: flex;
   flex-wrap: wrap;
-  margin: 3px;
+  gap: 50px;
+  margin: 45px;
+}
+
+.btC {
+  height: 20px;
+  width: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(255, 191, 73);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 4px;
+  transition: 0.7s;
 }
 
 @media (max-width:600px) {
-.mango {
-  align-items: center;
-  margin: 50px;
+.menu {
+  display: flex;
+  flex-direction: row;
+  margin: 90px;
+  gap: 60px;
 }
 }

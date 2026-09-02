@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
     integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link class="icon" rel="icon" type="image" href="/image/juicy-logo.png">
+  <link class="icon" rel="icon" type="image" href="/image/juicy-logo.png">
 </head>
 
 <body>
@@ -23,8 +23,8 @@
         <div class="menu">
           <% products.forEach(product=> { %>
 
-            <div class="mango">
-              <img src=<%=product.image %> class="jj">
+            <div class="product">
+              <img src="<%= product.image %>" class="jj">
               <h2>
                 <%= product.name %>
               </h2>
@@ -32,8 +32,10 @@
                 <%= product.price %> EG
               </p>
               <div>
-                <button><i class="fa-solid fa-cart-plus"></i></button>
-                <button><i class="fa-solid fa-info"></i></button>
+                <button class="btC"><i class="fa-solid fa-cart-plus"></i></button>
+                <a href="./user/viewP.ejs/<%= product._id %>">
+                  <button class="btC"><i class="fa-solid fa-eye"></i></button>
+                </a>
               </div>
             </div>
             <% }) %>
@@ -41,7 +43,5 @@
       </section>
     </main>
 </body>
-
-</html>
 
 </html>

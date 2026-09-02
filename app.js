@@ -30,6 +30,17 @@ app.get('/user/add.ejs', (req, res) => {
   res.render('user/add')
 })
 
+app.get('/user/viewP.ejs/:id', (req, res) => {
+  const productId = req.params.id;
+  Product.findById(productId)
+    .then((product) => {
+      res.render('user/viewP', { product });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 app.post('/user/add.ejs', upload.single('image'), (req, res) => {
   const stream = cloudinary.uploader.upload_stream({ folder: 'juicy' }, (error, result) => {
     if (error) {
@@ -57,7 +68,7 @@ app.post('/user/add.ejs', upload.single('image'), (req, res) => {
 })
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect("mongodb+srv://nnourelden_db_user:SgfxrcFH1jEZxl8n@cluster0.ipewqxy.mongodb.net/data?appName=Cluster0")
   .then(() => {
     app.listen(3000, () => {
       console.log('http://localhost:3000')

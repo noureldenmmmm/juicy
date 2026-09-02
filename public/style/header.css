@@ -1,6 +1,6 @@
 .logo {
   height: auto;
-  width: 4%;
+  width: 70px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
@@ -16,6 +16,7 @@
   padding: 0.5%;
   border: 20px;
   top: 0;
+  flex-wrap: wrap;
 }
 
 .props {
@@ -33,12 +34,13 @@ body {
   border: none;
   border-radius: 25px;
   padding: 0 20px;
-  width: 100px;
+  width: 200px;
   height: 40px;
   outline: none;
   box-shadow: inset 0 3px 12px rgba(0, 0, 0, 0.5);
   caret-color: rgb(205, 133, 0);
   margin: 7px;
+
 }
 
 .btA {
